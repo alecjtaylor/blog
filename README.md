@@ -1,0 +1,2 @@
+# blog
+Github pages blog
