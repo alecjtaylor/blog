@@ -68,7 +68,10 @@ paginate: 5
 paginate_path: '/blog/page:num/'
 plugins: [jekyll-paginate]
 
+highlighter: rouge
+
 permalink: pretty
 markdown: kramdown
 kramdown:
     auto_ids: false
+    syntax_highlighter: rouge
