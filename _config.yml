@@ -30,7 +30,7 @@ sass:
 # Site navigation - each item must have a title and a url.
 navigation:
 - text: Home
-  url: /
+  url: /blog/
 - text: About
   url: /blog/about/
 - text: Style Guide
