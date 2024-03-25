@@ -10,8 +10,6 @@ tags: [Travel, Blogging]
 <blockquote>I enjoy going on motorcycle trips and stopping in small towns and enjoying drinks with the locals.</blockquote>
 As a specific movement in the arts it is identified with developments in post–World War II Western Art, most strongly with American visual arts in the 1960s and early 1970s. Prominent artists associated with this movement include Donald Judd, John McCracken, Agnes Martin, Dan Flavin, Robert Morris, Anne Truitt, and Frank Stella. It derives from the reductive aspects of Modernism and is often interpreted as a reaction against Abstract expressionism and a bridge to Postminimal art practices. <a title="Minimalism Source" href="http://en.wikipedia.org/wiki/Minimalism" target="_blank">{ Source }</a>
 
-<!--more-->
-
 ```json
 {
   "firstName": "John",
@@ -19,6 +17,11 @@ As a specific movement in the arts it is identified with developments in post–
   "age": 25
 }
 ```
+
+
+
+<!--more-->
+
 
 <h2>Motorcycle Ride</h2>
 
