@@ -2,7 +2,7 @@
 layout: page
 title: About this blog
 description: An optional about page for BlogBox Jekyll theme
-featured_image: aboutPage.jpg
+featured_image: .jpg
 ---
 
 This blog is mostly for me to write down techy stuff so that:

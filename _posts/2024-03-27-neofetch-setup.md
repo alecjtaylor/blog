@@ -39,18 +39,20 @@ or if you are on a mac
 
 ## Second Job
 ### Set up a cron entry to run every 'X' minutes to run the above script
-You will need to run the command {% highlight bash %} 'crontab -e' {% endhighlight %} in order to add the text below. If given the option, select the nano option to edit the file, the world doesn't need more VIM evaglesits.
+You will need to run this command: 
+{% highlight bash %} 'crontab -e' {% endhighlight %} 
+So that you enter the edit mode of your cron config files so that we can add the text below. If given the option, select the nano option to edit the file, the world doesn't need more VIM evaglesits.
 
 {% highlight bash %}
-* * * * * 'home/alecjtaylor/.nf.sh'
-@reboot 'home/alecjtaylor/.nf.sh'
+* * * * * '/home/alecjtaylor/.nf.sh'
+@reboot '/home/alecjtaylor/.nf.sh'
 {% endhighlight %}
 
 or if you are on a mac
 
 {% highlight bash %}
 * * * * * '/Users/alecjtaylor/.nf.sh'
-@reboot 'Users/alecjtaylor/.nf.sh'
+@reboot '/Users/alecjtaylor/.nf.sh'
 {% endhighlight %}
 
 
