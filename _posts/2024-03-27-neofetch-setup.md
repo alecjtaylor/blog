@@ -3,10 +3,10 @@ layout: post
 title:  "Neofetch set up"
 date:   2024-03-27
 featured_image: mac_neofetch.jpg
-tags: [Neofetch, Linux. dotfiles, configuration]
+tags: [neofetch, linux. dotfiles, configuration]
 ---
 
-Neofetch is a handy (if a little cheesy) utility that gives some useful summary info about a *nix system from one command in the terminal. Many people, including myself like to have this pop up each time they launch a terminal instance. This behvaiour is handy if you have mutliple systems that you are accessing via SSH and want to be reminded of where you are in the world! 
+Neofetch is a handy, slightly cheesy utility that gives some useful summary info about a *nix system from one command in the terminal. Many people, including myself like to have this pop up each time they launch a terminal instance. This behvaiour is handy if you have mutliple systems that you are accessing via SSH and want to be reminded of where you are in the world! 
 
 *note if you are running a Zsh shell on mac, this wont work! 
 

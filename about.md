@@ -5,20 +5,11 @@ description: An optional about page for BlogBox Jekyll theme
 featured_image: aboutPage.jpg
 ---
 
-My name is John Doe. I’m a full-time adventure travel blogger and photographer who’s been exploring the world for over 5 years.
+This blog is mostly for me to write down techy stuff so that:
+1) I remember what the hell I did 3 years ago on a rapsberry pi
+2) Maybe someone else gets a bit of benefit?
+3) Practice and with any luck improve the art of writing. My job doesn't require that I write anything other than the odd email so hopefully I can practice that lost skill here. 
 
-Welcome to my blog and I absolutely appreciate you stopping by! On December 25th, 2001, I left the Canada for a four months, trip to Asia. The idea was to backpack around China, Thailand, Vietnam and Cambodia and then return home and start a career in the IT industry.
+I my techy home life, I use a combo of linux and mac so try to write down how I achieve the same thing on both platforms, assuming it is possible. I've tried to live in the linux world complely but hobbies such as Music and compatabilities with certain bits of picky hardware keep me coming back to a mac as my main desktop. There are many things that linux does better but for 'just working' with basic stuff, you really can't beat a Mac. 
 
-When I landed in Bangkok, I had $3500 USD to my name and that was it. I booked a bed in a old guesthouse in the center of the city for about a dollar per night and let the adventure begin.
 
-> “To live is the rarest thing in the world. Most people exist, that is all.” <cite>― Oscar Wilde ―</cite>
-
-In the end, I never went home after those three months. And it’s now been over 14 years and that trip has still yet to finish.
-
-The adventure has involved over 75+ countries on 5 continents as I’ve worked, lived, traveled and volunteered all over the planet.
-
-Through my own adventures – from the incredible moments and rewarding interactions to the struggles and major challenges – I aim to provide a realistic and honest account of what long-term travel is truly about and how you can work on achieving such a goal yourself.
-
-While the recognition and mentions this blog has received over the years are certainly nice, nothing compares to an email from a reader telling me that the blog helped them achieve their own travel goals.
-
-*Thank You for reading!*

@@ -16,13 +16,13 @@ logo:
 
 # A description of your site for social meta tag, search engines, and feed.xml
 description: |
-  BlogBox is a bold theme for the Jekyll blogging platform. Available for purchase at ThemeForest.net.
+  A colleciton of notes to self that someone might find useful at somepoint in the distant future?
 
 # The base hostname & protocol of your site for where absolute urls are needed
-url: https://blogbox.netlify.app
+url: https://alecjtaylor.github.io/blog/
 
 # The subpath of your site, if you want to host your path on a subpath like on GitHub Pages. e.g. /blog
-baseurl:
+baseurl: /blog/
 
 sass:
   sass_dir: _sass
@@ -30,13 +30,15 @@ sass:
 # Site navigation - each item must have a title and a url.
 navigation:
 - text: Home
-  url: /blog/
+  url: /
 - text: About
-  url: /blog/about/
-- text: Style Guide
-  url: /blog/style-guide/
+  url: /about/
+#- text: Style Guide
+#  url: /blog/style-guide/
 - text: Archives
-  url: /blog/tags/
+  url: /tags/
+- text: Weather Station
+  url: http://alecjtaylor.com/weather/current_conditions.html
 
 # Author information - author info at the bottom of the post
 author_name: "Alec Clancy-Taylor"
