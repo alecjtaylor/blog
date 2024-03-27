@@ -30,13 +30,13 @@ sass:
 # Site navigation - each item must have a title and a url.
 navigation:
 - text: Home
-  url: /
+  url: /blog/
 - text: About
-  url: /about/
+  url: /blog/about/
 #- text: Style Guide
 #  url: /blog/style-guide/
 - text: Archives
-  url: /tags/
+  url: /blog/tags/
 - text: Weather Station
   url: http://alecjtaylor.com/weather/current_conditions.html
 
