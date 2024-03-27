@@ -1,52 +1,72 @@
 ---
 layout: post
-title:  "Neofetch set up"
-date:   2024-03-27
+title: "Neofetch set up"
+date: 2024-03-27
 featured_image: mac_neofetch.jpg
 tags: [neofetch, linux. dotfiles, configuration]
 ---
+  
+Neofetch is a handy, slightly cheesy utility that gives some useful summary info about any *nix system from one command in the terminal. Many people, including myself like to have this pop up each time they launch a terminal instance. This behaviour is handy if you have multiple systems that you are accessing via SSH and want to be reminded of where you are in the world!
+  
+On modern, powerful hardware, neofetch pops up in a fraction of a second with its handy little summary, however, on lower powered hardware (raspberry pi's etc) you may find yourself waiting several seconds while it churns away to find out the relevant information. Obviously, this is an unacceptable state of affairs and needs resolving.
+  
+There are many ways that we can get round this issue, but the one I have settled on is to run an instance of neofetch every few minutes to update a cached file that is cat'd on start up of a terminal instance. This results in an instant display on any system I have tried so far.
+  
+To follow the steps below, you'll need to have neofetch installed, it is in most repos and can be installed via homebrew on a mac.
 
-Neofetch is a handy, slightly cheesy utility that gives some useful summary info about a *nix system from one command in the terminal. Many people, including myself like to have this pop up each time they launch a terminal instance. This behvaiour is handy if you have mutliple systems that you are accessing via SSH and want to be reminded of where you are in the world! 
-
-*note if you are running a Zsh shell on mac, this wont work! 
-
-On modern, powerful hardware, neofetch pops up in a fraction of a second with its handy little summary, however, on lower powered hardware (raspberry pi's etc) you may find yourself waiting several seconds while it churns away to find out the relavent information. 
-
-There are many ways that we can get round this issue, but the one I have settled on is to run an instance of neofetch every few minutes to update a cached file that is cat'd on start up of a terminal instance. This results in an instant display on any system I have tried so far. 
-
-### First Job - script to create cache of neofetch output.
+## First Job
+### Script to create cache of neofetch output.
+Create a hidden shell script in your home directory. Enter the following commands intoa terminal.
 
 {% highlight bash %}
-#!/bin/bash 
+touch .nf.sh
+chmod +x .nf.sh
+nano .nf.sh
+{% endhighlight %}
+
+now paste the following into your newly created shell script
+
+{% highlight bash %}
+#!/bin/bash
 /usr/bin/neofetch >| /home/alecjtaylor/.nf
 {% endhighlight %}
 
 or if you are on a mac
-
 {% highlight bash %}
 #!/bin/bash
 /usr/local/bin/neofetch >| /Users/alecjtaylor/.nf
 {% endhighlight %}
 
-### Second Job - set up a cron entry to run every 'X' minutes to run the above script
-It also runs on start up so you don't have to wait when you first boot up your machine. 
+## Second Job
+### Set up a cron entry to run every 'X' minutes to run the above script
+You will need to run the command {% highlight bash %} 'crontab -e' {% endhighlight %} in order to add the text below. If given the option, select the nano option to edit the file, the world doesn't need more VIM evaglesits.
 
 {% highlight bash %}
 * * * * * 'home/alecjtaylor/.nf.sh'
 @reboot 'home/alecjtaylor/.nf.sh'
 {% endhighlight %}
 
-### Final job - edit your .bashrc file
+or if you are on a mac
 
-In linux and assuming you are running a bash shell, you'll need to add a command at the end of the .bashrc file to display the content of the cached neofetch output each time a new terminal session is started. 
+{% highlight bash %}
+* * * * * '/Users/alecjtaylor/.nf.sh'
+@reboot 'Users/alecjtaylor/.nf.sh'
+{% endhighlight %}
+
+
+## Final job
+### Edit your .bashrc file
+
+In linux and assuming you are running a bash shell, you'll need to add a command at the end of the .bashrc file to display the content of the cached neofetch output each time a new terminal session is started.
 If you are on a mac, I'd suggest adding this to a .bash_profile file if it exists, or you can create your own .bashrc if you like.
+*note if you are running a ZSH shell on mac, you'll need to update your appropriate zsh config files which I think is the .zshrc
 
 {% highlight bash %}
 cat .nf 2> /dev/null
 {% endhighlight %}
 
-the '2> /dev/null' bit is a handy bash command that redirects any errors to /dev/null, which in practice hides them. this keeps things tidy just in case there is an issue with something in the chain. 
+the '2> /dev/null' bit is a handy bit of syntax that redirects any errors to /dev/null, which in practice hides them from appearing in the terminal. This keeps things tidy just in case there is an issue with something in the chain.
 
-<!--more-->
+If all has gone well, you should now get something like this each time you open a terminal or remote into the system.
 
-{% include image_caption.html imageurl="/blog/images/posts/raspberry_neofetch.jpg" title="Mac Neofetch" caption="Sample of mac neofetch output" %}
+{% include image_caption.html imageurl="/blog/images/posts/raspberry_neofetch.jpg" title="Mac Neofetch" caption="Sample of raspberry pi neofetch output" %}
