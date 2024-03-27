@@ -19,10 +19,10 @@ description: |
   A colleciton of notes to self that someone might find useful at somepoint in the distant future?
 
 # The base hostname & protocol of your site for where absolute urls are needed
-url: https://alecjtaylor.github.io
+url: https://alecjtaylor.github.io/
 
 # The subpath of your site, if you want to host your path on a subpath like on GitHub Pages. e.g. /blog
-baseurl: /blog/
+baseurl: /blog
 
 sass:
   sass_dir: _sass
