@@ -24,17 +24,17 @@ chmod +x .nf.sh
 nano .nf.sh
 {% endhighlight %}
 
-now paste the following into your newly created shell script
+now paste the following into your newly created shell script (swapping %USER with your username)
 
 {% highlight bash %}
 #!/bin/bash
-/usr/bin/neofetch >| /home/alecjtaylor/.nf
+/usr/bin/neofetch >| /home/$USER/.nf
 {% endhighlight %}
 
 or if you are on a mac
 {% highlight bash %}
 #!/bin/bash
-/usr/local/bin/neofetch >| /Users/alecjtaylor/.nf
+/usr/local/bin/neofetch >| /Users/$USER/.nf
 {% endhighlight %}
 
 ## Second Job
@@ -44,15 +44,15 @@ You will need to run this command:
 So that you enter the edit mode of your cron config files so that we can add the text below. If given the option, select the nano option to edit the file, the world doesn't need more VIM evaglesits.
 
 {% highlight bash %}
-* * * * * '/home/alecjtaylor/.nf.sh'
-@reboot '/home/alecjtaylor/.nf.sh'
+* * * * * '/home/$USER/.nf.sh'
+@reboot '/home/$USER/.nf.sh'
 {% endhighlight %}
 
 or if you are on a mac
 
 {% highlight bash %}
-* * * * * '/Users/alecjtaylor/.nf.sh'
-@reboot '/Users/alecjtaylor/.nf.sh'
+* * * * * '/Users/$USER/.nf.sh'
+@reboot '/Users/$USER/.nf.sh'
 {% endhighlight %}
 
 
