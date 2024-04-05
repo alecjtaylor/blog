@@ -2,7 +2,7 @@
 layout: post
 title: "Conky set up"
 date: 2024-03-29
-featured_image: conky.jpg
+featured_image: conky_full.jpg
 tags: [neofetch, linux. dotfiles, configuration]
 ---
 
