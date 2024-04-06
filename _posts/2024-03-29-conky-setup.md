@@ -14,7 +14,7 @@ This version of configuration is run on my laptop that is either:
 1. Docked to my main display, power, ethernet and other accessories via usb C.  
 2. On battery power away from a charger
 
-Main change is a collection of if statement to show certain bits of data depending on situation 
+Main change from a normal config is a collection of if statement to show certain bits of data depending on situation 
 
 ## Ethernet
 This bit of code detects if there is an active ethernet category and if there is, displays the elements within the if statement. 
@@ -31,18 +31,19 @@ ${stippled_hr 2}$endif
 {% endhighlight %}
 
 ## Battery Bar colour
-A long nested if to show a different colour of battery bar based on the percentage of the battery, colours will need to be set to what is appropriate for your own set up. 
+A long nested if to show a different colour of battery bar based on the percentage of the battery, colours will need to be set to what is appropriate for your own set up. Note the slash on the end of the line, this allows the configuration line to contine on the line below for readability but conky will read all this text as a a continious line. Handy unix trick. 
 
 {% highlight bash %}
-${if_match ${battery_percent} <= 20}${if_match ${battery_percent} >=1}${color1}${battery_bar}$color${endif}${endif}\
-${if_match ${battery_percent} <= 40}${if_match ${battery_percent} >=20}${color2}${battery_bar}$color${endif}${endif}\
-${if_match ${battery_percent} <= 70}${if_match ${battery_percent} >=40}${color2}${battery_bar}$color${endif}${endif}\
-${if_match ${battery_percent} <= 80}${if_match ${battery_percent} >=70}${color2}${battery_bar}$color${endif}${endif}\
+${if_match ${battery_percent} <= 20}${if_match ${battery_percent} >=1}${color2}${battery_bar}$color${endif}${endif}\
+${if_match ${battery_percent} <= 40}${if_match ${battery_percent} >=20}${color1}${battery_bar}$color${endif}${endif}\
+${if_match ${battery_percent} <= 70}${if_match ${battery_percent} >=40}${color0}${battery_bar}$color${endif}${endif}\
+${if_match ${battery_percent} <= 80}${if_match ${battery_percent} >=70}${color0}${battery_bar}$color${endif}${endif}\
 ${if_match ${battery_percent} <= 100}${if_match ${battery_percent} >=80}${color7}${battery_bar}$color${endif}${endif}
 {% endhighlight %}
 
 
-
+## Full script content 
+This is likley to change at some point, I may come back and update this if needed
 
 {% highlight bash %}
 ##################### references #######################
@@ -133,10 +134,10 @@ ${color0}Arch: ${alignr}$color$machine
 ${color1}BATTERY INFORMATION ${hr 2}$color
 ${color0}Battery charge: ${battery_percent}% $color
 ${color0}AC adapter: $color$acpiacadapter
-${if_match ${battery_percent} <= 20}${if_match ${battery_percent} >=1}${color1}${battery_bar}$color${endif}${endif}\
-${if_match ${battery_percent} <= 40}${if_match ${battery_percent} >=20}${color2}${battery_bar}$color${endif}${endif}\
-${if_match ${battery_percent} <= 70}${if_match ${battery_percent} >=40}${color2}${battery_bar}$color${endif}${endif}\
-${if_match ${battery_percent} <= 80}${if_match ${battery_percent} >=70}${color2}${battery_bar}$color${endif}${endif}\
+${if_match ${battery_percent} <= 20}${if_match ${battery_percent} >=1}${color2}${battery_bar}$color${endif}${endif}\
+${if_match ${battery_percent} <= 40}${if_match ${battery_percent} >=20}${color1}${battery_bar}$color${endif}${endif}\
+${if_match ${battery_percent} <= 70}${if_match ${battery_percent} >=40}${color0}${battery_bar}$color${endif}${endif}\
+${if_match ${battery_percent} <= 80}${if_match ${battery_percent} >=70}${color0}${battery_bar}$color${endif}${endif}\
 ${if_match ${battery_percent} <= 100}${if_match ${battery_percent} >=80}${color7}${battery_bar}$color${endif}${endif}
 
 # CPU information
