@@ -6,7 +6,7 @@ featured_image: conky_full.jpg
 tags: [neofetch, linux. dotfiles, configuration]
 ---
 
-Conky has been around on the linux desktop (and ports to mac) for 15+ years now. A handy bit of screen candy that fills a similar job to neofetch but on the desktop envrionement. Some people spend a lot of time ricing tweaking the configuration to match with the rest of their set up to be 'just so'. My config is neither pretty or perfect, but it is functional for me and shows me what I need to know on my system. 
+Conky has been around on the linux desktop (and ports to mac) for 15+ years now. A handy bit of screen candy that fills a similar job to neofetch but on the desktop envrionement. Some people spend a lot of time ricing/tweaking their configuration to match with the rest of their system. My config is neither pretty or perfect, but it is functional for me and shows me what I need to know on my system. 
 
 As is that tradition, Conkyrc files are often shared and modified online - this is my verison - with a few changes to meet my requirements. 
 
