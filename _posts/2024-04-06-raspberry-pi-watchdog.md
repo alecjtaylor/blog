@@ -2,7 +2,7 @@
 layout: post
 title: "Raspberry pi watchdog"
 date: 2024-04-06
-featured_image: .jpg
+featured_image: hardware_watchdog.jpg
 tags: [raspberry pi, linux, dotfile, configuration]
 ---
 
