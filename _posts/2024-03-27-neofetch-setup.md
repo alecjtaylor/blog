@@ -16,7 +16,11 @@ To follow the steps below, you'll need to have neofetch installed, it is in most
 
 ## First Job
 ### Script to create cache of neofetch output.
-Create a hidden shell script in your home directory. Enter the following commands intoa terminal.
+Create a hidden shell script in your home directory. Enter the following commands into a terminal.
+
+{% highlight bash %}
+sudo apt install neofetch
+{% endhighlight %}
 
 {% highlight bash %}
 touch .nf.sh
@@ -40,9 +44,10 @@ or if you are on a mac
 ## Second Job
 ### Set up a cron entry to run every 'X' minutes to run the above script
 You will need to run this command: 
-{% highlight bash %} 'crontab -e' {% endhighlight %} 
+{% highlight bash %} crontab -e {% endhighlight %} 
 So that you enter the edit mode of your cron config files so that we can add the text below. If given the option, select the nano option to edit the file, the world doesn't need more VIM evaglesits.
 
+n.b. swapping %USER with your username
 {% highlight bash %}
 * * * * * '/home/$USER/.nf.sh'
 @reboot '/home/$USER/.nf.sh'
@@ -67,7 +72,7 @@ If you are on a mac, I'd suggest adding this to a .bash_profile file if it exist
 cat .nf 2> /dev/null
 {% endhighlight %}
 
-the '2> /dev/null' bit is a handy bit of syntax that redirects any errors to /dev/null, which in practice hides them from appearing in the terminal. This keeps things tidy just in case there is an issue with something in the chain.
+This is a handy bit of syntax that redirects any errors to /dev/null, which in practice hides them from appearing in the terminal. This keeps things tidy just in case there is an issue with something in the chain.
 
 If all has gone well, you should now get something like this each time you open a terminal or remote into the system.
 
