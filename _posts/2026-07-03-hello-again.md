@@ -2,7 +2,7 @@
 layout: post
 title: "Hello again"
 date: 2026-07-03
-featured_image: hardware_watchdog.jpg
+featured_image: P1010415.jpg
 tags: [Photos, blog]
 ---
 
